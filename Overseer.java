@@ -8,6 +8,7 @@ public class Overseer {
 	int cnt, cnt2, cnt3, numDeadCells;
 	String[] options = {"Next Gen", "Exit Game"};
 	
+	//This constructor is used to inform the user of the rules of the simulation. Until the program is exited, the simulation will continue to run infinitely.
 	public Overseer() {
 		exited = false;
 		cnt = 1;
