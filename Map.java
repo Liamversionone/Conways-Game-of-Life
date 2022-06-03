@@ -3,12 +3,17 @@ package mod;
 import javax.swing.JOptionPane;
 
 public class Map {
+	
 	boolean[][] map;
 	Sizer s;
 	double intput;
 	
+	//Getter
 	public Sizer getSizer() {return s;}
 	
+	/*Constructor:
+	  This is used to create a new "map" that is used to display all of the cells. It will ask the user what percent of the cells they want to be alive at the
+	  beginning. It will create a String that will display everything.*/
 	public Map() {
 		s = new Sizer();
 		map = s.getArray();
@@ -22,6 +27,7 @@ public class Map {
 		}
 	}
 	
+	//This method loops through a boolean array to create a String that displays if the cell is alive or dead.
 	public String makeMap() {
 		String ret = "";
 		String t = "\u25A1";
@@ -42,6 +48,7 @@ public class Map {
 		return ret;
 	}
 	
+	//This method will simulate the next generation. This will go through each cell and check whether or not is should be alive or dead in the next generation.
 	public boolean[][] nextGeneration(){
 		for(int i = 0; i < map.length; i++) {
 			for(int j = 0; j < map[i].length; j++) {
